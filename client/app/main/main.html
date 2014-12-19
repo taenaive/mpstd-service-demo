@@ -1,14 +1,24 @@
+<div ng-include="'components/banners/banner_top.html'"></div>
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <header class="hero-unit" id="banner">
   <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+   <div class="row">
+    <img src="assets/images/armyLogo.png" alt="Army logo" class="col-md-2.5">
+    <img src="assets/images/coastGuardLogo.png" alt="Coast Guard logo" class="col-md-2.5">
+    <img src="assets/images/navyLogo.png" alt="Navy logo" class="col-md-2.5">
+    <img src="assets/images/marineLogo.png" alt="Navy logo" class="col-md-2.5">
+    <img src="assets/images/airforceLogo.png" alt="Air Force logo" class="col-md-2.5">
+  </div>
   </div>
 </header>
-
-<div class="container">
+<div class="container hero-unit">
+   
+    
+    <img src="assets/images/mpstdLogo.png" alt="mpstd logo" >
+ 
+  </div>
+<!-- <div class="container">
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">Features:</h1>
@@ -16,9 +26,9 @@
         <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
       </ul>
     </div>
-  </div>
+  </div> -->
 
-  <form class="thing-form">
+  <!-- <form class="thing-form">
     <label>Syncs in realtime across clients</label>
     <p class="input-group">
       <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
@@ -27,12 +37,12 @@
       </span>
     </p>
   </form>
-</div>
-
-<footer class="footer">
+</div> -->
+<div  ng-include="'components/banners/banner_bottom.html'"></div>
+<!-- <footer class="footer">
   <div class="container">
       <p>Angular Fullstack v2.0.13 |
         <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
          <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
   </div>
-</footer>
+</footer> -->
