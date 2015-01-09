@@ -1,3 +1,13 @@
+<div ng-include="'components/banners/banner_top.html'"></div>
 <div class="col-md-12">
 This is the applicant_services view.
 </div>
+
+<h1>Select text file</h1>
+    <input type="file" on-read-file="showContent($fileContent)" />
+    <div ng-if="content">
+        <h2>File content is:</h2>
+        <pre>{{ content }}</pre>
+    </div>
+
+<div  ng-include="'components/banners/banner_bottom.html'"></div>

@@ -6,6 +6,7 @@ angular.module('mpstdServiceDemoApp')
       .state('applicant_services', {
         url: '/applicant_services',
         templateUrl: 'app/applicant_services/applicant_services.html',
-        controller: 'ApplicantServicesCtrl'
+        controller: 'ApplicantServicesCtrl',
+        authenticate: true
       });
   });
