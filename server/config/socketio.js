@@ -18,6 +18,7 @@ function onConnect(socket) {
   });
 
   // Insert sockets below
+  require('../api/soap_factory/soap_factory.socket').register(socket);
   require('../api/thing/thing.socket').register(socket);
 }
 
