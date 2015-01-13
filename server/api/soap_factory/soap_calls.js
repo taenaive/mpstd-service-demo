@@ -17,7 +17,64 @@ function nameFieldUtil( name_in){
 	return name_in;
 	
 }
-var soapGetApplicant = function(url){
+exports.retrieveAckRequest = function(url){
+	
+	var failedResponseHeader ={ operationStatus: 'false'} ;
+	var func = {
+		
+		retrieve: function(data ,callback){ 
+			//TODO:
+			if (data.applicantId == null){
+				 	data.applicantId='1261' //default test applicant
+				 }
+			if (data.userRoleType == null){
+				 	data.userRoleType='ApplicantID' //default HIV DAT
+				 }
+			var requestArgs = {requestHeader:{ loginUserName: 'null', requestId:'1'}, 
+                                          cityOfBirth: "Baltimore",
+         								  dateOfBirth: new Date(),
+										  ssn:"70212972",
+         								  gender:"Female"
+                                    };
+
+            soap.createClient(url, function(err, client) {
+
+			  	  if(err){
+			  	  	  console.log ("Error msg: " + err);
+			  	  	   callback(err, failedResponseHeader);
+			  	  	   return;
+			  	  }
+  	              else{
+	  	  				console.log(" ======= Oracle SOA retrieveSignature Response: ======");
+	  	  				
+	  	  				console.log( JSON.stringify(client.describe()) );	
+	  	  				//console.log (JSON.stringify(client.retrieveAcknowledgements));
+				        client.retrieveAcknowledgements(requestArgs, function(err, result) {
+				           if(err){
+				           	callback({err: err}, null);
+				           	return;
+				           }
+				           
+				           console.log (Object.keys(result));
+				       //    console.log(aProfile.profilePicture.substring(0,300));
+
+				           //userRoleType is the factor for the search
+				           var APPL ={};
+				         
+				           callback(null,APPL);
+				        });
+
+				      }                     	
+				});
+
+		}
+		
+	}
+	//console.log(" soapSave instanciated"); 
+ 	return func;
+};
+
+exports.soapGetApplicant = function(url){
 	
 	var failedResponseHeader ={ operationStatus: 'false'} ;
 	var func = {
@@ -82,5 +139,4 @@ var soapGetApplicant = function(url){
  	return func;
 };
 
-module.exports =  soapGetApplicant;
 

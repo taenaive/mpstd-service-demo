@@ -16,6 +16,13 @@ angular.module('mpstdServiceDemoApp')
             return{};
             }
           },
+      retrieveAckRequest: function( data ){
+        if(data){
+              return $http.get('/api/soap_factory/retrieveAckRequest?id='+data);
+            }else{
+            return{};
+            }
+      },
       someMethod: function () {
         return meaningOfLife;
       }

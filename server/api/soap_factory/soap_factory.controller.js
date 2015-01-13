@@ -25,6 +25,11 @@ exports.show = function(req, res) {
          soapUtil.executeApplicant({applicantId: req.query.id } ,res);
          return;
       }
+    else if (req.params.id =="retrieveAckRequest" && req.query.id){
+       
+         soapUtil.retrieveAckRequestRest({applicantId: req.query.id } ,res);
+         return;
+      } 
   // SoapFactory.findById(req.params.id, function (err, soap_factory) {
   //   if(err) { return handleError(res, err); }
   //   if(!soap_factory) { return res.send(404); }
