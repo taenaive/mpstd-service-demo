@@ -1,8 +1,21 @@
 'use strict';
 
 angular.module('mpstdServiceDemoApp')
-  .controller('ApplicantServicesCtrl', function ($scope, $http, Auth, User) {
-    $scope.message = 'Hello';
+  .controller('ApplicantServicesCtrl', function ($scope, $http, Auth, User,commonFactory) {
+    // getApplicant   
+    $scope.fireGetApplicant = function(applicantid){
+    	commonFactory.getApplicant(applicantid)   
+         .success(function( result ){
+         			console.log(JSON.stringify(result));
+
+         		  })
+                  .error(function (error) {
+                      $scope.model.applicantInfo ={};
+                     // console.log( 'Unable to load customer data <<getApplicant>>: ');
+                  });
+
+    }
+   
 
      $scope.showContent = function($fileContent){
         $scope.content = $fileContent;

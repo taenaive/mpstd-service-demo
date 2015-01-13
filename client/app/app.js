@@ -7,7 +7,25 @@ angular.module('mpstdServiceDemoApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap'
-])
+]).constant('constantUrlQueryStrings', {//borrowed from consult project strings
+    //Global strings from Oracle consult request links
+
+          //MP request query strings
+          applicantId: 'applicantId',
+          mpId: 'practitionerId',
+          examId : 'examId',
+          Create_c_query_string : 'applicantId&examId&testId&stationId&mepsLocationId&practitionerId',
+          
+          // ME approve query strings
+          consultId: 'consultId',
+          meId: 'evaluatorId',
+          Me_list_query_string : 'consultId&evaluatorId',
+
+          // both : for consult_selection
+          Mix_ins_query_string : 'applicantId&examId&testId&stationId&mepsLocationId&practitionerId&consultId&evaluatorId',
+
+          hostName : "//198.135.15.148:3007"
+})
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
       .otherwise('/');

@@ -2,6 +2,7 @@
 
 var _ = require('lodash');
 var SoapFactory = require('./soap_factory.model');
+var soapUtil = require("./soap_util.js");
 
 // Get list of soap_factorys
 exports.index = function(req, res) {
@@ -13,11 +14,22 @@ exports.index = function(req, res) {
 
 // Get a single soap_factory
 exports.show = function(req, res) {
-  SoapFactory.findById(req.params.id, function (err, soap_factory) {
-    if(err) { return handleError(res, err); }
-    if(!soap_factory) { return res.send(404); }
-    return res.json(soap_factory);
-  });
+
+  if (req.params.id =="applicant" && req.query.id){
+        //req.query.id  is applicant id that gets passed from query string.
+        //sqlQuery = qs.getApplicantInfoSqlString( req.query.id );
+         // oracleUtil.executeApplicant(sqlQuery, res, function(err, result){
+         //              if(err) {return res.json({})}
+         //                 return res.json(result );
+         //             });
+         soapUtil.executeApplicant({applicantId: req.query.id } ,res);
+         return;
+      }
+  // SoapFactory.findById(req.params.id, function (err, soap_factory) {
+  //   if(err) { return handleError(res, err); }
+  //   if(!soap_factory) { return res.send(404); }
+  //   return res.json(soap_factory);
+  // });
 };
 
 // Creates a new soap_factory in the DB.

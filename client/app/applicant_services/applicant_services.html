@@ -4,6 +4,16 @@ This is the applicant_services view.
 </div>
 
 <h1>Select text file</h1>
+
+	<div class="row">
+			<div class="col-xs-6"></div>
+			
+			<div class="col-xs-2" style="float:right">
+				<button type="button" class="btn btn-warning btn-lg btn-block"
+				ng-click="fireGetApplicant('1261')">Return To Provider</button>
+			</div>
+	</div>
+
     <input type="file" on-read-file="showContent($fileContent)" />
     <div ng-if="content">
         <h2>File content is:</h2>

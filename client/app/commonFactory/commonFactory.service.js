@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('mpstdServiceDemoApp')
-  .factory('commonFactory', function () {
+  .factory('commonFactory', function ($http) {
     // Service logic
     // ...
 
@@ -9,6 +9,13 @@ angular.module('mpstdServiceDemoApp')
 
     // Public API here
     return {
+      getApplicant: function(applicantId){
+            if(applicantId){
+              return $http.get('/api/soap_factory/applicant?id='+applicantId);
+            }else{
+            return{};
+            }
+          },
       someMethod: function () {
         return meaningOfLife;
       }
