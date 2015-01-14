@@ -1,23 +1,51 @@
 <div ng-include="'components/banners/banner_top.html'"></div>
-<div class="col-md-12">
-This is the applicant_services view.
+<div class="page-header">
+<h1 style="text-align:center"> Acknowldegement Service</h1>
 </div>
 
-<h1>Select text file</h1>
-
 	<div class="row">
-			<div class="col-xs-6"></div>
+			<div  class="col-xs-8">
+				<h3 style="float:left;margin-left:10px">Select XML file to Send : </h3>
+				<span class="btn btn-primary btn-file" style="margin-top:17px;margin-left:10px">
+			    Choose...<input type="file" on-read-file="showContent($fileContent)" />
+			    </span>
+			</div>
+			<div class="col-xs-2">
 			
-			<div class="col-xs-2" style="float:right">
+			</div>
+			
+		<!-- 	<div class="col-xs-2" style="float:right">
 				<button type="button" class="btn btn-warning btn-lg btn-block"
 				ng-click="retrieveAckRequest('1261')">Return To Provider</button>
-			</div>
+			</div> -->
 	</div>
-
-    <input type="file" on-read-file="showContent($fileContent)" />
-    <div ng-if="content">
-        <h2>File content is:</h2>
-        <pre>{{ content }}</pre>
-    </div>
-
+	<div style="margin: 40px"/>
+    <!-- <div ng-if="content"> -->
+    	<div class="row">
+    		<div class="col-xs-2">	
+	        <h4 style="margin-left:10px;">Service input Msg:</h4>
+	        </div>
+	        <div class="col-xs-8">
+	        <div class="tae_scrollpane">
+	        <pre style="margin-top:13px;">{{ content }}</pre>
+	        </div>
+	     	</div>
+	     	<div class="col-xs-2">
+	     	</div>
+        </div>
+    <!-- </div> -->
+    <div style="margin: 40px"/>
+    	<div class="row" >
+    		<div class="col-xs-2">	
+	        <h4 style="margin-left:10px;">Service Response:</h4>
+	        </div>
+	        <div class="col-xs-8">
+	        <div class="tae_scrollpane">
+	        <pre style="margin-top:13px;">{{ result }}</pre>
+	        </div>
+	     	</div>
+	     	<div class="col-xs-2">
+	     	</div>
+        </div>
+        <div style="margin: 40px"/>
 <div  ng-include="'components/banners/banner_bottom.html'"></div>

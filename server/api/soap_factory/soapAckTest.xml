@@ -1,0 +1,10 @@
+<ret:retrieveAcknowledgementsRequest xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ret="http://www.mepcom.mil/mpstd/message/RetrieveAcknowledgements" xmlns:req="http://www.mepcom.army.mil/mpstd/dataTypes/common/RequestHeader">
+         <ret:requestHeader>
+            <req:loginUserName></req:loginUserName>
+            <req:requestId></req:requestId>
+         </ret:requestHeader>
+         <ret:cityOfBirth>Baltimore</ret:cityOfBirth>
+         <ret:dateOfBirth>1992-05-04T00:00:00.000-04:00</ret:dateOfBirth>
+         <ret:ssn>370212972</ret:ssn>
+         <ret:gender>Female</ret:gender>
+      </ret:retrieveAcknowledgementsRequest>

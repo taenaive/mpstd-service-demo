@@ -25,11 +25,7 @@ exports.show = function(req, res) {
          soapUtil.executeApplicant({applicantId: req.query.id } ,res);
          return;
       }
-    else if (req.params.id =="retrieveAckRequest" && req.query.id){
-       
-         soapUtil.retrieveAckRequestRest({applicantId: req.query.id } ,res);
-         return;
-      } 
+    return handleError(res, err);
   // SoapFactory.findById(req.params.id, function (err, soap_factory) {
   //   if(err) { return handleError(res, err); }
   //   if(!soap_factory) { return res.send(404); }
@@ -39,10 +35,20 @@ exports.show = function(req, res) {
 
 // Creates a new soap_factory in the DB.
 exports.create = function(req, res) {
-  SoapFactory.create(req.body, function(err, soap_factory) {
-    if(err) { return handleError(res, err); }
-    return res.json(201, soap_factory);
-  });
+ console.log('tae: hola post msg!');
+  if (req.params.id =="retrieveAckRequest" 
+                      && req.body 
+                      && typeof req.body.msg != 'undefined' ){
+         console.log(req.body.msg);
+         soapUtil.retrieveAckRequestRest(req.body.msg ,res);
+         return;
+      } 
+
+    return handleError(res, err);
+  // SoapFactory.create(req.body, function(err, soap_factory) {
+  //   if(err) { return handleError(res, err); }
+  //   return res.json(201, soap_factory);
+  // });
 };
 
 // Updates an existing soap_factory in the DB.

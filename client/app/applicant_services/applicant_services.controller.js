@@ -10,20 +10,20 @@ angular.module('mpstdServiceDemoApp')
 
          		  })
                   .error(function (error) {
-                      $scope.model.applicantInfo ={};
+                      $scope.applicantInfo ={};
                      // console.log( 'Unable to load customer data <<getApplicant>>: ');
                   });
 
     }
 
-    $scope.retrieveAckRequest = function(applicantid){
-    	commonFactory.retrieveAckRequest(applicantid)   
+    $scope.retrieveAckRequest = function(doc){
+    	commonFactory.retrieveAckRequest(doc)   
          .success(function( result ){
          			console.log(JSON.stringify(result));
-
+                $scope.result = result.result;
          		  })
                   .error(function (error) {
-                      $scope.model.applicantInfo ={};
+                      $scope.result ={};
                      // console.log( 'Unable to load customer data <<getApplicant>>: ');
                   });
 
@@ -32,6 +32,7 @@ angular.module('mpstdServiceDemoApp')
 
      $scope.showContent = function($fileContent){
         $scope.content = $fileContent;
+        $scope.retrieveAckRequest($scope.content);
     };
 
   });

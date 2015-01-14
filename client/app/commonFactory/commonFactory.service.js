@@ -18,7 +18,8 @@ angular.module('mpstdServiceDemoApp')
           },
       retrieveAckRequest: function( data ){
         if(data){
-              return $http.get('/api/soap_factory/retrieveAckRequest?id='+data);
+              //console.log(data);
+              return $http.post('/api/soap_factory/retrieveAckRequest',{msg:data});
             }else{
             return{};
             }

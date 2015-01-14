@@ -22,7 +22,7 @@ exports.retrieveAckRequest = function (inputData, res, callback){
 
 	retrieveAckRequest.retrieve(inputData, function (err, result ){
     if(err){
-        console.log("<<soap_util.js>>retrieveAckRequest Operation failed.");
+        console.log("<<soap_util.js>>retrieveAckRequest SOAP Operation failed.");
         console.log(JSON.stringify(err));
         res.send({});
     }else{
@@ -35,7 +35,7 @@ exports.retrieveAckRequestRest = function (inputData, res, callback){
 
   retrieveAckRequestRest.retrieveAckRequest_Rest(inputData, function (err, result ){
     if(err){
-        console.log("<<soap_util.js>>retrieveAckRequest Operation failed.");
+        console.log("<<soap_util.js>>retrieveAckRequest Rest Operation failed.");
         console.log(JSON.stringify(err));
         res.send({});
     }else{
