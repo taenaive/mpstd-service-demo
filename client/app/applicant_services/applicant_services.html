@@ -34,7 +34,8 @@
 	        </div>
 	        <div class="col-xs-8">
 	        <div class="tae_scrollpane">
-	        <pre style="margin-top:13px;">{{ content }}</pre>
+	        <textarea class="tae_scrollpane" ng-model="content"> </textarea>
+	        <!-- <pre style="margin-top:13px;">{{ content }}</pre> -->
 	        </div>
 	     	</div>
 	     	<div class="col-xs-2">
@@ -47,8 +48,8 @@
 	        <h4 style="margin-left:10px;">Service Response:</h4>
 	        </div>
 	        <div class="col-xs-8">
-	        <div class="tae_scrollpane">
-	        <pre style="margin-top:13px;">{{ result }}</pre>
+	        <div >
+	        <pre class="tae_scrollpane" style="margin-top:13px;">{{ result }}</pre>
 	        </div>
 	     	</div>
 	     	<div class="col-xs-2">

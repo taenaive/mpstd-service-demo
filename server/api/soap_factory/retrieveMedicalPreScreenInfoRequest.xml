@@ -1,0 +1,14 @@
+
+<ret:retrieveMedicalPreScreenInfoRequest xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ret="http://www.mepcom.army.mil/mpstd/message/RetrieveMedicalPreScreenInfo" xmlns:req="http://www.mepcom.army.mil/mpstd/dataTypes/common/RequestHeader">
+<!--Optional:-->
+<ret:requestHeader>
+<!--Optional:-->
+<req:loginUserName></req:loginUserName>
+<!--Optional:-->
+<req:requestId></req:requestId>
+</ret:requestHeader>
+<ret:birthDate>1992-05-04T00:00:00.000-04:00</ret:birthDate>
+<ret:ssn>370212972</ret:ssn>
+<ret:gender>Female</ret:gender>
+<ret:cityOfBirth>Baltimore</ret:cityOfBirth>
+</ret:retrieveMedicalPreScreenInfoRequest>

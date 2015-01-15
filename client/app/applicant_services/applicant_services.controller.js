@@ -36,6 +36,7 @@ angular.module('mpstdServiceDemoApp')
     };
 
     $scope.getSvcResponse = function( svc_type ){
+         if( !$scope.content) return;
          $scope.retrieveAckRequest($scope.content);
     }
 

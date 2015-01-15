@@ -1,6 +1,6 @@
 /* common scroll pane */
 .tae_scrollpane {
-	width: auto;
+	width: 100%;
 	height:300px;
 	overflow: auto;
 }
