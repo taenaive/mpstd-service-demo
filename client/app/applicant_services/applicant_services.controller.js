@@ -32,8 +32,12 @@ angular.module('mpstdServiceDemoApp')
 
      $scope.showContent = function($fileContent){
         $scope.content = $fileContent;
-        $scope.retrieveAckRequest($scope.content);
+       
     };
+
+    $scope.getSvcResponse = function( svc_type ){
+         $scope.retrieveAckRequest($scope.content);
+    }
 
   });
 
