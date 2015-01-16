@@ -39,12 +39,19 @@ exports.create = function(req, res) {
   if (req.params.id =="retrieveAckRequest" 
                       && req.body 
                       && typeof req.body.msg != 'undefined' ){
-         console.log(req.body.msg);
+         //console.log(req.body.msg);
          soapUtil.retrieveAckRequestRest(req.body.msg ,res);
          return;
-      } 
-
-    return handleError(res, err);
+      }
+  else if (req.params.id =="medicalPreScreen"&& req.body 
+                      && typeof req.body.msg != 'undefined' ){
+         console.log(req.body.msg);
+         soapUtil.retrieveMedicalPreScreenRest(req.body.msg ,res);
+         return;
+      }
+  else {
+      return handleError(res, err);
+    }
   // SoapFactory.create(req.body, function(err, soap_factory) {
   //   if(err) { return handleError(res, err); }
   //   return res.json(201, soap_factory);

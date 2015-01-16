@@ -24,6 +24,14 @@ angular.module('mpstdServiceDemoApp')
             return{};
             }
       },
+      medicalPreScreen: function( data ){
+        if(data){
+              //console.log(data);
+              return $http.post('/api/soap_factory/medicalPreScreen',{msg:data});
+            }else{
+            return{};
+            }
+      },
       someMethod: function () {
         return meaningOfLife;
       }

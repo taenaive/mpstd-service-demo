@@ -29,8 +29,7 @@ angular.module('mpstdServiceDemoApp')
 
     }
    
-
-     $scope.showContent = function($fileContent){
+    $scope.showContent = function($fileContent){
         $scope.content = $fileContent;
        
     };
@@ -38,6 +37,20 @@ angular.module('mpstdServiceDemoApp')
     $scope.getSvcResponse = function( svc_type ){
          if( !$scope.content) return;
          $scope.retrieveAckRequest($scope.content);
+    }
+
+    $scope.getMedicalPreScreen = function( svc_type ){
+         if( !$scope.content) return;
+         commonFactory.medicalPreScreen($scope.content)   
+         .success(function( result ){
+              console.log(JSON.stringify(result));
+                $scope.result = result.result;
+              })
+                  .error(function (error) {
+                      $scope.result ={};
+                     // console.log( 'Unable to load customer data <<getApplicant>>: ');
+                  });
+
     }
 
   });
