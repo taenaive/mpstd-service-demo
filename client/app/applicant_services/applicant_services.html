@@ -24,8 +24,22 @@
 
 <div class ="row">
 	<div class="col-xs-2">
-	<button type="button" class="btn btn-warning" ng-click="getSvcResponse('ack')">Acknowledgement </button>
-	<button type="button" class="btn btn-danger" ng-click="getMedicalPreScreen('med')">MedicalPreScreen </button>
+	<button type="button" class="btn btn-warning service-btn" ng-click="getSvcResponse('ack')">Acknowledgement </button>
+
+	<button type="button" class="btn btn-danger service-btn" ng-click="getMedicalPreScreen('med')">MedicalPreScreen </button>
+	<button type="button" class="btn btn-danger service-btn" ng-click="getMedicalPreScreen('medCreate')">MPS Create </button>
+
+	<button type="button" class="btn btn-warning service-btn" ng-click="getMedicalPreScreen('bpiRetrive')">BPI Retrieve</button>
+	<button type="button" class="btn btn-warning service-btn" ng-click="getMedicalPreScreen('bpiSync')">BPI Sync</button>
+
+	<button type="button" class="btn btn-danger service-btn" ng-click="getMedicalPreScreen('docRetrieve')">DocumentRetrive</button>
+	<button type="button" class="btn btn-danger service-btn" ng-click="getMedicalPreScreen('docUpload')">DocumentRestUpload</button>
+
+	<button type="button" class="btn btn-warning service-btn" ng-click="getMedicalPreScreen('medicalExam')">Medical Exam</button>
+
+	<button type="button" class="btn btn-default service-btn" ng-click="getMedicalPreScreen('biometric')">Biometric</button>
+	
+	
 	</div>
 	<div class="col-xs-10">
     <!-- <div ng-if="content"> -->

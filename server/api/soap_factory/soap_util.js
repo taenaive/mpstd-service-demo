@@ -43,14 +43,32 @@ exports.retrieveAckRequestRest = function (inputData, res, callback){
     }
   });
 }
+// svc_type: med, medCretae
+exports.genericRest = function (svc_type ,inputData, res, callback){
+  var end_point;
+  switch(svc_type){
+    case 'med' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/MedicalPrescreenRetriveRest';
+                  break;
+    case 'medCreate': end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/MedicalPrescrnCreateRest';
+                      break;
+    case 'bpiRetrive' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/BPIRetriveRestProxy';
+                            break;
+    case 'bpiSync' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/BPISyncRestProxy';
+                            break;
+    case 'docRetrieve' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/DocumentRestServiceRetrive';
+                            break;
+    case 'docUpload' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/DocumentRestServiceUpload';
+                            break;
+    case 'medicalExam' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/medicalExam';
+                            break;
+    default:  
+      console.log("<<soap_util.js>>genericRest Rest did not get called.");
+       return res.send({result: {}});             
+  }
 
-exports.retrieveMedicalPreScreenRest = function (inputData, res, callback){
-
-  rest_calls.MedicalPreScreen_Rest(inputData, 
-      'http://MPSTD-SOA01:8011/mpstd/rest/MedicalPrescreenRetriveRest',
-      function (err, result ){
+  rest_calls.MedicalPreScreen_Rest(inputData, end_point, function (err, result ){
     if(err){
-        console.log("<<soap_util.js>>MedicalPreScreen_Rest Rest Operation failed.");
+        console.log("<<soap_util.js>>genericRest Rest Operation failed.");
         console.log(JSON.stringify(err));
         res.send({result: err});
     }else{

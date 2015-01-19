@@ -1,0 +1,125 @@
+      <syn:synchronizeBasicPersonalInfoRequest xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:syn="http://www.mepcom.army.mil/mpstd/message/SynchronizeBasicPersonalInfo">
+         <!--Zero or more repetitions:-->
+         <syn:basicPersonalInfo>
+            <syn:firstName>May</syn:firstName>
+            <!--Optional:-->
+           
+            <syn:middleName>M</syn:middleName><syn:lastName>Marcs</syn:lastName>
+            <!--Optional:-->
+           
+            <!--Optional:-->
+           
+            <!--1 or more repetitions:-->
+            <syn:maidenName>Mason</syn:maidenName><syn:currentAddress>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+               <syn:address1>3 Current Dr</syn:address1>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+               <syn:address2>Rm 422</syn:address2><syn:city>Aspen</syn:city><syn:country>US</syn:country>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+               <syn:county>Test County1</syn:county><syn:state>CO</syn:state>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+               <syn:zip>81611</syn:zip>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+              
+            </syn:currentAddress>
+            <!--Zero or more repetitions:-->
+            <syn:homeOfRecordAddress>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+               <syn:address1>3 Home Dr</syn:address1>
+               <!--Optional:-->
+               
+               <!--Optional:-->
+               <syn:address2>Rm 2344</syn:address2><syn:city>Denver</syn:city><syn:country>US</syn:country>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+               <syn:county>Test County2</syn:county><syn:state>CT</syn:state>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+               <syn:zip>80201</syn:zip>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+              
+            </syn:homeOfRecordAddress>
+            <syn:gender>Female</syn:gender>
+            <!--Optional:-->
+            <syn:maritalStatus>Never Married</syn:maritalStatus>
+            <syn:homeNumber>4445553333</syn:homeNumber>
+            <syn:mobileNumber>3335554444</syn:mobileNumber>
+            <syn:militaryBranch>Air Force</syn:militaryBranch>
+            <syn:serviceComponent>Regular</syn:serviceComponent>
+            <!--Optional:-->
+            <syn:selectiveServiceClassification>1-A</syn:selectiveServiceClassification>
+            <!--Optional:-->
+           
+            <syn:selectiveServiceRegNumber>34214412</syn:selectiveServiceRegNumber><syn:ssn>875424140</syn:ssn>
+            <syn:birthDate>1995-01-14T00:00:00.000-05:00</syn:birthDate>
+            <syn:validDriverLic>true</syn:validDriverLic>
+            <!--Optional:-->
+           
+            <!--Optional:-->
+            <syn:driverLicNumber>564742951co</syn:driverLicNumber><syn:driverLicState>CT</syn:driverLicState>
+            <!--Optional:-->
+           
+            <!--Optional:-->
+            <syn:driverLicExpDate>2019-01-20T00:00:00.000-05:00</syn:driverLicExpDate>
+            <!--Optional:-->
+            <syn:numberOfDependents>0</syn:numberOfDependents><syn:racialCategory>White</syn:racialCategory>
+            <!--Optional:-->
+            <syn:ethnicCategory>Not Hispanic or Latino</syn:ethnicCategory>
+            <!--Optional:-->
+            <syn:relegiousPrefrences>Atheist</syn:relegiousPrefrences>
+            <!--Optional:-->
+            <syn:education>16 - Fourth Year of College</syn:education>
+            <!--Optional:-->
+            <syn:profInForeignLanguage>AFRO-ASIAN - AFA</syn:profInForeignLanguage>
+            <!--Optional:-->
+           
+            <syn:occupation>Testing</syn:occupation><syn:citizenshipStatus>A Person Born In The U.S. Subject To The U.S. Jurisdiction</syn:citizenshipStatus>
+            <syn:citizenshipCountry>US</syn:citizenshipCountry>
+            <syn:citizenshipOriginReason>Person was born in the country of citizenship</syn:citizenshipOriginReason>
+            <syn:cityOfBirth>zxcv</syn:cityOfBirth>
+            <syn:birthState>CT</syn:birthState>
+            <syn:birthCountry>US</syn:birthCountry>
+            <!--Optional:-->
+           
+            <!--Zero or more repetitions:-->
+            <syn:priorService>
+               <!--Optional:-->
+               <syn:branchOfService>Army</syn:branchOfService>
+               <!--Optional:-->
+               <syn:activeDutyOrReserve>Regular</syn:activeDutyOrReserve>
+               <!--Optional:-->
+              
+               <!--Optional:-->
+               <syn:serviceStartDate>2013-01-01T00:00:00.000-05:00</syn:serviceStartDate>
+               <!--Optional:-->
+               <syn:serviceEndDate>2014-01-01T00:00:00.000-05:00</syn:serviceEndDate><syn:characterOfDischarge>Honorable</syn:characterOfDischarge>
+               <!--Optional:-->
+               <syn:dischargeReason>Weight Control Failure</syn:dischargeReason>
+            </syn:priorService>
+            <!--Optional:-->
+            <syn:reasonOfRejection>Under Age</syn:reasonOfRejection>
+            <!--Optional:-->
+            <syn:typeOfDischarge>Resignation, Other</syn:typeOfDischarge>
+            <!--Optional:-->
+           
+            <!--Optional:-->
+              <syn:dateOfRejectionFronMilitary>2006-12-29T00:00:00.000-05:00</syn:dateOfRejectionFronMilitary><syn:email>mpstd.test+mmarcs@gmail.com</syn:email><syn:position>Tester</syn:position>
+         </syn:basicPersonalInfo>
+      </syn:synchronizeBasicPersonalInfoRequest>
+ 

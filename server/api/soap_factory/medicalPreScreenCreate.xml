@@ -1,0 +1,41 @@
+<cre:createMedicalPreScreenInfoRequest xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cre="http://www.mepcom.army.mil/mpstd/message/CreateMedicalPreScreenInfo" xmlns:req="http://www.mepcom.army.mil/mpstd/dataTypes/common/RequestHeader">
+         <!--Optional:-->
+         <cre:requestHeader>
+            <!--Optional:-->
+            <req:loginUserName></req:loginUserName>
+            <!--Optional:-->
+            <req:requestId></req:requestId>
+         </cre:requestHeader>
+         <cre:birthDate>1992-05-04T00:00:00.000-04:00</cre:birthDate>
+         <cre:ssn>370212972</cre:ssn>
+         <cre:gender>Female</cre:gender>
+         <cre:cityOfBirth>Baltimore</cre:cityOfBirth>
+         <!--Optional:-->
+         <cre:medicalPreScreenInfo>
+            <!--Zero or more repetitions:-->
+            <cre:preScreenQuestions>
+               <!--Optional:-->
+               <!--Optional:-->
+               <cre:questionID>10b</cre:questionID>
+               <!--Optional:-->
+               <!--Optional:-->
+               <cre:formIdentifier>2807-1</cre:formIdentifier>
+               <!--Zero or more repetitions:-->
+               <cre:answer>
+                  <!--Optional:-->
+                  <!--Optional:-->
+                  <cre:answerText>Y</cre:answerText>
+                  <!--Zero or more repetitions:-->
+                  <cre:comment>
+                     <!--Optional:-->
+                     <!--Optional:-->
+                     <cre:commentText>Test</cre:commentText>
+                     <!--Optional:-->
+                     <cre:commentedBy>aJai</cre:commentedBy>
+                     <!--Optional:-->
+                  </cre:comment>
+               </cre:answer>
+            </cre:preScreenQuestions>
+         </cre:medicalPreScreenInfo>
+     </cre:createMedicalPreScreenInfoRequest>
+  

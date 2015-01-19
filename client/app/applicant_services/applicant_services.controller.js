@@ -41,7 +41,7 @@ angular.module('mpstdServiceDemoApp')
 
     $scope.getMedicalPreScreen = function( svc_type ){
          if( !$scope.content) return;
-         commonFactory.medicalPreScreen($scope.content)   
+         commonFactory.medicalPreScreen(svc_type, $scope.content)   
          .success(function( result ){
               console.log(JSON.stringify(result));
                 $scope.result = result.result;

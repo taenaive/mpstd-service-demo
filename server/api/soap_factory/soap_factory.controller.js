@@ -45,8 +45,43 @@ exports.create = function(req, res) {
       }
   else if (req.params.id =="medicalPreScreen"&& req.body 
                       && typeof req.body.msg != 'undefined' ){
-         console.log(req.body.msg);
-         soapUtil.retrieveMedicalPreScreenRest(req.body.msg ,res);
+         soapUtil.genericRest('med',req.body.msg ,res);
+         return;
+      }
+      //medicalPreScreenCreate
+  else if (req.params.id =="medicalPreScreenCreate"&& req.body 
+                      && typeof req.body.msg != 'undefined' ){
+         soapUtil.genericRest('medCreate',req.body.msg ,res);
+         return;
+      }
+      //bpiRetrive
+  else if (req.params.id =="bpiRetrive"&& req.body 
+                      && typeof req.body.msg != 'undefined' ){
+         soapUtil.genericRest('bpiRetrive',req.body.msg ,res);
+         return;
+      }
+      //bpiSync
+  else if (req.params.id =="bpiSync"&& req.body 
+                      && typeof req.body.msg != 'undefined' ){
+         soapUtil.genericRest('bpiSync',req.body.msg ,res);
+         return;
+      }
+      //bpiRetrive
+  else if (req.params.id =="docRetrieve"&& req.body 
+                      && typeof req.body.msg != 'undefined' ){
+         soapUtil.genericRest('docRetrieve',req.body.msg ,res);
+         return;
+      }
+      //bpiSync
+  else if (req.params.id =="docUpload"&& req.body 
+                      && typeof req.body.msg != 'undefined' ){
+         soapUtil.genericRest('docUpload',req.body.msg ,res);
+         return;
+      }
+       //bpiSync
+  else if (req.params.id =="medicalExam"&& req.body 
+                      && typeof req.body.msg != 'undefined' ){
+         soapUtil.genericRest('medicalExam',req.body.msg ,res);
          return;
       }
   else {
