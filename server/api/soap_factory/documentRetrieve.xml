@@ -1,0 +1,12 @@
+<ret:retrieveMedicalExaminationRequest xmlns:ret="http://www.mepcom.mil/mpstd/message/RetrieveMedicalExamination" xmlns:req="http://www.mepcom.army.mil/mpstd/dataTypes/common/RequestHeader">
+    <ret:requestHeader>
+        <req:loginUserName>?</req:loginUserName>
+        <req:requestId>?</req:requestId>
+    </ret:requestHeader>
+    <ret:goldData>
+        <ret:birthDate>1995-01-14T00:00:00.000-05:00</ret:birthDate>
+        <ret:ssn>564742957</ret:ssn>
+        <ret:gender>Female</ret:gender>
+        <ret:cityOfBirth>Annandale</ret:cityOfBirth>
+    </ret:goldData>
+</ret:retrieveMedicalExaminationRequest>

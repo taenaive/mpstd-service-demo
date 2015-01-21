@@ -59,7 +59,7 @@ exports.genericRest = function (svc_type ,inputData, res, callback){
                             break;
     case 'docUpload' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/DocumentRestServiceUpload';
                             break;
-    case 'medicalExam' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/medicalExam';
+    case 'medicalExam' : end_point = 'http://MPSTD-SOA01:8011/mpstd/rest/MedicalExamRestProxy';
                             break;
     default:  
       console.log("<<soap_util.js>>genericRest Rest did not get called.");
