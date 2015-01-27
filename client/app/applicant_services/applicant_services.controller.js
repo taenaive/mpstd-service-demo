@@ -77,3 +77,10 @@ angular.module('mpstdServiceDemoApp')
 		}
 	};
 });
+
+angular.module('mpstdServiceDemoApp')
+  .filter('pretty',function(){
+    return function(text){
+      return prettyPrintOne(text, 'xml');
+    }
+  })
